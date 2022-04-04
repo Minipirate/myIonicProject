@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title
+      >Planètes<ion-icon color="primary" name="planet-outline"></ion-icon
+    ></ion-title>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2 class="ion-margin">Liste des planètes</h2>
+  <ion-list inset="true">
+    <ion-item *ngFor="let elt of courses">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{elt.name}}</ion-card-title>
+          <ion-card-subtitle>caractéristiques</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content> nb étudiants : {{elt.nbEtud}} </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <p>
+    <a routerLink="/home">Home <ion-icon name="home-outline"></ion-icon> </a>
+  </p>
+</ion-content>

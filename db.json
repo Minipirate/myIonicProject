@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "cours": [
+    {
+      "id": 4,
+      "nom": "Cours d'astronomie (conférence)",
+      "nbEleves": 100,
+      "professeur": "Etienne KLEIN"
+    },
+    {
+      "id": 7,
+      "nom": "Vers l'infini et au delà ! ",
+      "nbEleves": 500,
+      "professeur": "Buzz l'éclair "
+    },
+    {
+      "id": 8,
+      "nom": "L'exoconférence",
+      "nbEleves": 800,
+      "professeur": "Alexandre ASTIER"
+    }
+  ]
+}

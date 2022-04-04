@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title
+      >Entry astronomy courses<ion-icon
+        color="primary"
+        name="planet-outline"
+      ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="saisieform" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item>
+      <ion-label>Course Name: </ion-label>
+      <ion-input placeholder="name to enter" formControlName="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Professeur : </ion-label>
+      <ion-input
+        placeholder="teacher to enter"
+        formControlName="prof"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Students number : </ion-label>
+      <ion-input
+        type="number"
+        placeholder="Students number to enter"
+        formControlName="nbel"
+      ></ion-input>
+    </ion-item>
+    <ion-button type="submit">Ajout</ion-button>
+  </form>
+</ion-content>

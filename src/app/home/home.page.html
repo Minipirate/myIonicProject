@@ -1,20 +1,81 @@
-<ion-header [translucent]="true">
+<!--Haut de la page-->
+<ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <!--On n'affiche le bouton d'installation que si l'on sait que l'appli n'a pas déjà été installée. Si l'on clique sur le bouton, on va appeler la méthode onInstall de notre TypeScript, qui va ouvrir le popup d'installation-->
+    <button *ngIf="promptEvent" (click)="onInstall()">Install</button>
+
+    <ion-title background
+      ><ion-icon name="star-outline"></ion-icon> Astronomy courses
+      <ion-icon name="star-outline"></ion-icon
+    ></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openMenu($event)">
+        <ion-icon
+          slot="icon-only"
+          ios="ellipsis-horizontal"
+          md="ellipsis-vertical"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!--DARK MODE TOGGLE-->
+<ion-item>
+  <ion-label>Switch on the dark side</ion-label>
+  <ion-toggle slot="end" (ionChange)="toggleTheme($event)"></ion-toggle>
+  <ion-img
+    width="80"
+    height="80"
+    src="../../assets/images/darkVador.png"
+  ></ion-img>
+</ion-item>
 
+<!--Contenu de la page-->
+<ion-content>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button color="secondary"
+      ><a routerLink="/cours">Courses list</a></ion-button
+    >
+    <ion-img
+      width="80"
+      height="80"
+      src="../../assets/images/espace.jpg"
+    ></ion-img>
+
+    <ion-button color="secondary"
+      ><a routerLink="/saisie-cours">Enter a course</a></ion-button
+    >
+    <ion-button color="danger" (click)="openAlert()">
+      <ion-icon name="warning-outline"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>
+
+<!--Bas de la page-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab1">
+          <ion-icon name="rocket-outline" routerLink="/nasa-story"></ion-icon>
+          <ion-label>Nasa story</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2">
+          <ion-icon name="star-outline" routerLink="/slides-photos"></ion-icon>
+          <ion-label>Gallery</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3">
+          <ion-icon name="planet-outline" routerLink="/space"></ion-icon>
+          <ion-label>Unusual facts</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

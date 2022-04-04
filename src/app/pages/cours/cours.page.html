@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+    <a routerLink="/home"
+      ><ion-icon name="arrow-undo-outline"></ion-icon>Home</a
+    >
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchPlanet"></ion-searchbar>
+  <ion-button (click)="filterPlanetsList()">Search</ion-button>
+  <ion-list inset="true">
+    <ion-item *ngFor="let cours of listeCours">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> {{cours.nom}} </ion-card-title>
+          <ion-card-subtitle>{{cours.professeur}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>Nb élèves : {{cours.nbEleves}} </ion-card-content>
+      </ion-card>
+      <ion-button color="danger" (click)="delete(cours)"
+        ><ion-icon name="trash-outline"> </ion-icon
+      ></ion-button>
+      <ion-button color="primary" (click)="update(cours)"
+        ><ion-icon name="pencil-outline"></ion-icon
+      ></ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!--<app-saisie (onajout)="ajout($event)"></app-saisie>-->
+
+  <ion-button (click)="ajoutCours()">
+    <span>Ajouter un cours</span>
+  </ion-button>
+</ion-content>

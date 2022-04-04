@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome on Mars !</ion-title>
+    <a routerLink="/home"
+      ><ion-icon name="arrow-undo-outline"></ion-icon>Home</a
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img width="80" height="80" src="../../assets/images/mars.jpg"></ion-img>
+  <ion-button color="secondary"> Specifications </ion-button>
+  <ion-card>
+    <p>
+      ​Mars is the fourth planet from the Sun – a dusty, cold, desert world with
+      a very thin atmosphere. Mars is also a dynamic planet with seasons, polar
+      ice caps, canyons, extinct volcanoes, and evidence that it was even more
+      active in the past. Mars is one of the most explored bodies in our solar
+      system, and it's the only planet where we've sent rovers to roam the alien
+      landscape. NASA currently has two rovers (Curiosity and Perseverance), one
+      lander (InSight), and one helicopter (Ingenuity) exploring the surface of
+      Mars.
+    </p></ion-card
+  >
+</ion-content>
+
+<!--Bas de la page-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab1">
+          <ion-icon name="rocket-outline" routerLink="/nasa-story"></ion-icon>
+          <ion-label>Nasa story</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2">
+          <ion-icon name="star-outline" routerLink="/slides-photos"></ion-icon>
+          <ion-label>Gallery</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3">
+          <ion-icon name="planet-outline" routerLink="/space"></ion-icon>
+          <ion-label>Unusual facts</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

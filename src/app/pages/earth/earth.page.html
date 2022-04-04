@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome on Earth !</ion-title>
+    <a routerLink="/home"
+      ><ion-icon name="arrow-undo-outline"></ion-icon>Home</a
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img width="80" height="80" src="../../assets/images/earth.jpg"></ion-img>
+  <ion-button color="secondary"> Specifications </ion-button>
+  <ion-card>
+    <p>
+      Our home planet is the third planet from the Sun, and the only place we
+      know of so far that’s inhabited by living things. While Earth is only the
+      fifth largest planet in the solar system, it is the only world in our
+      solar system with liquid water on the surface. Just slightly larger than
+      nearby Venus, Earth is the biggest of the four planets closest to the Sun,
+      all of which are made of rock and metal. The name Earth is at least 1,000
+      years old. All of the planets, except for Earth, were named after Greek
+      and Roman gods and goddesses. However, the name Earth is a Germanic word,
+      which simply means “the ground.”
+    </p></ion-card
+  >
+</ion-content>
+
+<!--Bas de la page-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab1">
+          <ion-icon name="rocket-outline" routerLink="/nasa-story"></ion-icon>
+          <ion-label>Nasa story</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2">
+          <ion-icon name="star-outline" routerLink="/slides-photos"></ion-icon>
+          <ion-label>Gallery</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3">
+          <ion-icon name="planet-outline" routerLink="/space"></ion-icon>
+          <ion-label>Unusual facts</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

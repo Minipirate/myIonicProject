@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome on Mercury !</ion-title>
+    <a routerLink="/home"
+      ><ion-icon name="arrow-undo-outline"></ion-icon>Home</a
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img
+    width="80"
+    height="80"
+    src="../../assets/images/mercury.jpg"
+  ></ion-img>
+  <ion-button color="secondary"> Specifications </ion-button>
+  <ion-card>
+    <p>
+      ​The smallest planet in our solar system and nearest to the Sun, Mercury
+      is only slightly larger than Earth's Moon. From the surface of Mercury,
+      the Sun would appear more than three times as large as it does when viewed
+      from Earth, and the sunlight would be as much as seven times brighter.
+      Despite its proximity to the Sun, Mercury is not the hottest planet in our
+      solar system – that title belongs to nearby Venus, thanks to its dense
+      atmosphere. Because of Mercury's elliptical – egg-shaped – orbit, and
+      sluggish rotation, the Sun appears to rise briefly, set, and rise again
+      from some parts of the planet's surface. The same thing happens in reverse
+      at sunset.
+    </p></ion-card
+  >
+</ion-content>
+
+<!--Bas de la page-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab1">
+          <ion-icon name="rocket-outline" routerLink="/nasa-story"></ion-icon>
+          <ion-label>Nasa story</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2">
+          <ion-icon name="star-outline" routerLink="/slides-photos"></ion-icon>
+          <ion-label>Gallery</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3">
+          <ion-icon name="planet-outline" routerLink="/space"></ion-icon>
+          <ion-label>Unusual facts</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
